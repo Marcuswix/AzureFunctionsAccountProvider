@@ -65,7 +65,7 @@ namespace AccountProvider.Functions
 
 
 
-                    if (isVerified ||)
+                    if (isVerified)
                     {
                         var userAccount = await _userManager.FindByEmailAsync(vr.Email);
                         if(userAccount != null)
