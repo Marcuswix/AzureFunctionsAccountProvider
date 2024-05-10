@@ -61,7 +61,8 @@ namespace AccountProvider.Functions
                             UserName = userRegistrationRequest.Email,
                         };
 
-                        var result = await _userManager.CreateAsync(userAccount);
+                        var result = await _userManager.CreateAsync(userAccount, userRegistrationRequest.Password);
+
                         if(result.Succeeded)
                         {
                             using var http = new HttpClient();
